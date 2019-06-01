@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "310063208133",
+    "firebase_url": "https://superfilmes-ff2d2.firebaseio.com",
+    "project_id": "superfilmes-ff2d2",
+    "storage_bucket": "superfilmes-ff2d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310063208133:android:3096bd193a5dd2d1",
+        "android_client_info": {
+          "package_name": "com.alessandrostamatto.super_movies"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310063208133-eir0bask4kiikdbn70pd6g8sstp97tdp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5D7k9YFb_sfZiqfyiQeXJifH51UahkSg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310063208133-eir0bask4kiikdbn70pd6g8sstp97tdp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
