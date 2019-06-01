@@ -3,6 +3,7 @@ import 'package:super_movies/helpers/alerts.dart';
 import 'package:super_movies/helpers/navi.dart';
 import 'package:super_movies/models/Filme.dart';
 import 'package:super_movies/pages/HomePage.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class FilmePage extends StatelessWidget {
   final Filme filme;
@@ -21,6 +22,12 @@ class FilmePage extends StatelessWidget {
 
   _body(BuildContext context) {
     final path = 'https://image.tmdb.org/t/p/w300';
+
+    Firestore.instance.collection('favoritos').document()
+        .setData({
+          'title': 'teste', 'poster_path': 'caminho',
+          'vote_average': '80', 'overview': 'sinopse'
+        });
 
     return Column(
       children: <Widget>[
