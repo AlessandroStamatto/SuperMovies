@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'package:flutter/material.dart';
 import 'package:super_movies/helpers/alerts.dart';
@@ -14,9 +15,12 @@ class FavoritosPage extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Container(
-      child: FutureBuilder(
-          future: FilmesService.getFavoritos(),
-          builder: (context, snapshot) => _filmesList(snapshot.data)
+      child: StreamBuilder<QuerySnapshot>(
+          stream: Firestore.instance.collection('favoritos').snapshots(),
+          builder: (context, snapshot) =>
+            snapshot.data != null
+            ? _filmesList(snapshot.data.documents.map((doc) => Filme.fromJson(doc.data)).toList())
+            : Text('Carregando filmes...', style: TextStyle(fontSize: 26),),
       )
     );
   }

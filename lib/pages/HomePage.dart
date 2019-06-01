@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:super_movies/helpers/alerts.dart';
 import 'package:super_movies/helpers/navi.dart';
 
+import 'FavoritosPage.dart';
 import 'FilmesPage.dart';
 import 'LoginPage.dart';
 
@@ -29,7 +30,7 @@ class HomePage extends StatelessWidget {
         body: TabBarView(
           children: [
             FilmesPage(),
-            FilmesPage(),
+            FavoritosPage(),
           ],
         ),
       ),

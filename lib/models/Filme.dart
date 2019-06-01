@@ -12,6 +12,13 @@ class Filme {
         vote_average = json["vote_average"].toString(),
         overview = json["overview"];
 
+  toJson() {
+    return {
+      'title': this.title, 'vote_average': this.vote_average,
+      'poster_path' : this.poster_path, 'overview': this.overview
+    };
+  }
+
   @override
   String toString() {
     return title;
